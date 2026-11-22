@@ -23,7 +23,7 @@ hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:24px 0}
 <body>
 <a href="/" class="back">&larr; Coresi OS</a>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: April 1, 2026</p>
+<p class="updated">Last updated: November 22, 2026</p>
 
 <p>This Privacy Policy describes how Alexander Poletaev, sole proprietor ("Company", "we", "us", "our"), collects, uses, stores, and protects your personal data when you use Coresi OS ("Coresi", "the App", "the Service") — a Human Operational System for behavioral self-understanding.</p>
 <p>We are committed to protecting your privacy and complying with the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable data protection laws.</p>
@@ -50,8 +50,9 @@ hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:24px 0}
 <h3>2.2 Data Collected Automatically</h3>
 <ul>
 <li>Device type, OS version, app version — for service delivery and debugging.</li>
-<li>Features used, session duration — for service improvement.</li>
+<li>Features used, session duration — for service improvement, only if you opt in to analytics.</li>
 <li>Crash reports — for bug fixing.</li>
+<li>Only with your permission: moments of movement from Apple Health (iPhone, Apple Watch) or Health Connect (Android) — timestamps only, to estimate when you fell asleep and woke up. We do not read step counts, routes or heart rate. You can turn this off in Settings; the marks are then deleted.</li>
 </ul>
 
 <h3>2.3 Special Category Data (GDPR Article 9)</h3>
@@ -75,19 +76,20 @@ hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:24px 0}
 </ul>
 
 <h2>4. AI Processing</h2>
-<p>Your data is processed by Anthropic (Claude) to generate reports and insights. Your data is sent encrypted, our agreement prohibits the provider from using your data for training, and data is not retained beyond the processing session (zero-retention API).</p>
+<p>Your entries are processed by Claude models of Anthropic via the Anthropic API — to analyse them (daily reports, insights, patterns) and to answer you in conversation. Only the entries needed for a given task are sent, encrypted in transit. Anthropic acts as our processor under its Data Processing Addendum, which includes the EU Standard Contractual Clauses; processing and storage may take place in the United States. Anthropic does not use this data to train its models. Anthropic deletes API inputs and outputs within 30 days, unless longer retention is required by law or for a safety review of content flagged under its usage policy.</p>
+<p>Until October 22, 2026, AI processing ran on Amazon Bedrock in an EU data center (Frankfurt). Since then it runs via the Anthropic API as described above; existing users are asked to confirm the updated consent in the App.</p>
 <p>Automated outputs are advisory in nature and do not produce legal effects. You may request human review by contacting us.</p>
 
 <h2>5. Data Storage and Security</h2>
-<p><strong>Storage:</strong> Supabase (PostgreSQL), US East (AWS).</p>
+<p><strong>Storage:</strong> Your account and entries are stored in our database — Supabase (PostgreSQL) in the EU, Frankfurt, Germany (AWS eu-central-1) — not at AI companies.</p>
 <p><strong>Security:</strong> Encryption in transit (TLS 1.3) and at rest (AES-256), row-level security, hashed passwords, regular security reviews.</p>
-<p><strong>Retention:</strong> Account data until deletion + 30 days. Entry data until deleted by you. Usage analytics up to 24 months anonymized. Payment records up to 7 years per law.</p>
+<p><strong>Retention:</strong> Account and entry data — until you delete them. Deleting your account in the App (Settings) erases your entries, profile, conversations and derived data from our live database immediately. Backup copies made for disaster recovery are kept separately, are used only to restore the service, and may still contain data after deletion. AI provider: see section 4. Usage analytics (only with opt-in) up to 24 months, anonymized. Payment records up to 7 years where required by law.</p>
 
 <h2>6. Data Sharing</h2>
 <p>We share data only with: AI providers (Anthropic) under DPA, cloud infrastructure (Supabase) under DPA, payment processors (Apple, Google), and legal authorities when required by law.</p>
 
 <h2>7. International Transfers</h2>
-<p>Data may be transferred to the US. For EU/EEA users, we ensure protection through Standard Contractual Clauses, Data Processing Agreements, and encryption.</p>
+<p>Your entries are stored in the EU (Frankfurt). When the AI analyses your entries or answers you, the relevant entries are sent to Anthropic and may be processed in the United States. For EU/EEA users this transfer is covered by the EU Standard Contractual Clauses in Anthropic's Data Processing Addendum, together with encryption in transit.</p>
 
 <h2>8. Your Rights</h2>
 <p><strong>GDPR (EU/EEA):</strong> Access, correction, deletion, restriction, portability, objection, consent withdrawal. Response within 30 days.</p>
